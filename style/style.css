@@ -1,0 +1,480 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #ffc244;
+}
+header {
+  font-family: "Amatic SC", cursive;
+  color: #00a082;
+  font-size: 80px;
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffc244;
+  transition: all 0.15s linear;
+}
+.active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+span {
+  font-family: "Amatic SC", cursive;
+  font-size: 80px;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+footer {
+  font-family: "Amatic SC", cursive;
+  /* background-color: #1d1d1d; */
+  /* color: white; */
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+}
+.cols {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
+.quote {
+  height: 200px;
+  line-height: 150px;
+  text-align: center;
+}
+#user-register {
+  border-radius: 30px;
+  width: 200px;
+  height: 60px;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  background-color: #00a082;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+  cursor: pointer;
+}
+
+#user-register:hover {
+  background-color: #79b0a1;
+}
+.top-phrase {
+  color: black;
+}
+.quote input[type="text"] {
+  padding-left: 20px;
+  border: none;
+  margin-right: 16px;
+  font-size: 27px;
+  font-family: "Amatic SC", cursive;
+}
+#search-field {
+  width: 300px;
+  height: 60px;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+}
+
+#search button {
+  border-radius: 30px;
+  width: 200px;
+  height: 60px;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  background-color: #00a082;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+  cursor: pointer;
+}
+
+#search button:hover {
+  background-color: #79b0a1;
+}
+
+.round-button {
+  background-color: #ffffff;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-family: "Amatic SC", cursive;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 20px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+  transition: 0.2s ease-in-out;
+  outline: none;
+}
+.category-img {
+  width: 100px;
+  height: 100px;
+}
+.round-button:hover {
+  transform: scale(1.1);
+}
+#categories {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+#best-food {
+  margin-top: 30px;
+  background-color: #eff1f4;
+}
+.wrapper {
+  height: 420px;
+  width: 654px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  height: 400px;
+  width: 307px;
+}
+
+.product-img img {
+  border-radius: 7px 0 0 7px;
+}
+
+.product-info {
+  float: left;
+  height: 400px;
+  width: 280px;
+  border-radius: 0 7px 10px 0px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  margin: 0 0 0 38px;
+  padding-top: 52px;
+  font-size: 34px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  font-family: "Amatic SC", cursive;
+}
+
+.product-text h2 {
+  margin: 0 0 47px 38px;
+  font-size: 23px;
+  font-family: "Amatic SC", cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d2d2d2;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: "Amatic SC", cursive;
+  color: #000000;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.product-price-btn {
+  height: 103px;
+  width: 327px;
+  margin-top: 17px;
+  position: relative;
+  text-align: center;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  font-family: "Amatic SC", cursive;
+  margin: 0 0 0 38px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+.product-price {
+  display: inline-block;
+  height: 50px;
+  font-family: "Amatic SC", cursive;
+  font-size: 34px;
+  color: #1d1d1d;
+}
+
+.product-price-btn button {
+  float: right;
+  display: inline-block;
+  height: 50px;
+  width: 176px;
+  margin: 0 40px 0 16px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: "Amatic SC", cursive;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: #00a082;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+}
+
+.product-price-btn button:hover {
+  background-color: #79b0a1;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.food-item {
+  margin: 20px;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+}
+
+.footer-links {
+  list-style: none;
+  text-align: center;
+  margin: 20px;
+}
+.footer-links-link {
+  cursor: pointer;
+  font-weight: 325;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 18px;
+  display: block;
+  text-align: left;
+  margin-bottom: 20px;
+  color: black;
+  width: 50px;
+}
+.footer-links-link:hover {
+  color: #f8f8f8;
+}
+.footer-headline {
+  font-size: 40px;
+  line-height: 18px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: left;
+  color: black;
+  padding-bottom: 10px;
+}
+.footer-container {
+  display: flex;
+  justify-content: center;
+}
+.footer-madeBy {
+  text-align: center;
+  size: 40px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  font-family: "Amatic SC", cursive;
+}
+
+.modal h1 {
+  text-align: center;
+  font-size: 50px;
+}
+/* Modal Content/Box */
+.modal-content {
+  border-radius: 60px;
+  margin: 0;
+  border:none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  margin: auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 36%; /* Could be more or less, depending on screen size */
+  display: flex;
+  flex-direction: column;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.text-area {
+  padding-top: 5px;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  border-radius: 60px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  outline: none;
+}
+.input-text {
+  padding-left: 10px;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+}
+.text-a {
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  resize: none;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+label {
+  font-size: 30px;
+}
+.send-order {
+  width: 10px;
+}
+.close {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 100px;
+}
+.close-message {
+  display: flex;
+  justify-content: space-between;
+}
+.submit-fast {
+  border-radius: 30px;
+  width: 100%;
+  height: 60px;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  background-color: #00a082;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+  cursor: pointer;
+  bottom: 10px;
+  right: 10px;
+  margin-top: 25px;
+}
+.submit-fast:hover {
+  background-color: #79b0a1;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 30px 40px 30px 40px;
+  text-align: center;
+  font-family: arial;
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+}
+
+.price {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #00a082;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-family: "Amatic SC", cursive;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.full-card {
+  display: flex;
+  flex-direction: column;
+}
+.add-to-div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.add-to-cart {
+  border-radius: 30px;
+  width: 200px;
+  height: 60px;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  background-color: #00a082;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+  cursor: pointer;
+  bottom: 0;
+}
+.add-to-cart:hover {
+  background-color: #79b0a1;
+}
