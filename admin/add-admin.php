@@ -5,6 +5,15 @@
 
         <br><br>
 
+        <?php
+        if (isset($_SESSION['add'])) {
+            echo $_SESSION['add'];
+            unset($_SESSION['add']);
+        }
+        ?>
+
+
+
         <form action='' method='GET'>
             <table class='tbl-30'>
                 <tr>
@@ -37,7 +46,6 @@
 
 <?php
 
-// $zminna = 
 
 if (isset($_GET['submit'])) {
     $first_name = $_GET['first_name'];
@@ -52,9 +60,16 @@ if (isset($_GET['submit'])) {
         password = '$password'
         ";
 
-    // $res = mysqli_query($conn, $sql) or die(mysqli_error());
+    $res = mysqli_query($conn, $sql) or die(mysqli_error('error'));
 
-   echo $sql;
+
+    if ($res == TRUE) {
+        $_SESSION['add'] = '<div class = "success"> Admin Added Successfully</div>';
+        header('location:' . SITEURL . 'admin/manage-admin.php');
+    } else {
+        $_SESSION['add'] = "<div class = 'error'> Failed To Add Admin</div>";
+        header('location:' . SITEURL . 'admin/add-admin.php');
+    }
 }
 
 ?>
