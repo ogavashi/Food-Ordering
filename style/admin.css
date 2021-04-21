@@ -49,6 +49,10 @@ table tr td {
   box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
   color: white;
   text-decoration: none;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 40px;
 }
 
 .btn-primary:hover {
@@ -94,6 +98,13 @@ table tr td {
   font-size: 25px;
 }
 
+.login-success {
+  color: #00a082;
+}
+
+.login-error {
+  color: #b63434;
+}
 .menu {
   border-bottom: 1px solid black;
   font-size: 50px;
@@ -141,4 +152,14 @@ table tr td {
 
 #dashboard {
   font-size: 60px;
+}
+
+.login {
+  width: 20%;
+  background-color: #1d1d1d;
+  color: white;
+  margin: 10% auto;
+  padding: 2%;
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 10%);
+  border-radius: 30px;
 }
