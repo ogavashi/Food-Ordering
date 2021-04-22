@@ -142,6 +142,7 @@ table tr td {
   color: white;
   font-size: 20px;
   float: left;
+  border-radius: 30px;
 }
 
 .footer {
