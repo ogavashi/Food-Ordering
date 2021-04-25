@@ -6,6 +6,8 @@
   
   body {
     background-color: #ffc244;
+    min-height: 100vh;
+    position: relative;
   }
   
   .wrapper {
@@ -149,6 +151,9 @@
     background-color: #1d1d1d;
     color: white;
     font-size: 30px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
   }
   
   #dashboard {

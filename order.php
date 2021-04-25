@@ -53,6 +53,34 @@ if (isset($_GET['product_id'])) {
             <button id="user-register">Order in one click</button>
         </div>
     </header>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="close-message">
+                <h1>Fill the form and we will call you</h1>
+                <span class="close">&times;</span>
+            </div>
+            <form class="fast-order">
+                <div class="vk">
+                    <label for="fname">First name:</label>
+                    <input class="input-text" type="text" id="fname" name="fname" />
+                </div>
+                <div class="vk">
+                    <label for="lname">last name:</label>
+                    <input class="input-text" type="text" id="lname" name="lname" />
+                </div>
+                <div class="vk">
+                    <label for="pnumber">Phone number:</label>
+                    <input class="input-text" type="text" id="pnumber" name="pnumber" />
+                </div>
+                <label for="clientOrder">What's your interest?<br /></label>
+                <div class="text-area">
+                    <textarea class="text-a" name="clientOrder" cols="60" rows="4" aria-required="true" aria-invalid="false">
+              </textarea>
+                </div>
+                <input class="submit-fast" type="submit" value="Send" name="submit" />
+            </form>
+        </div>
+    </div>
     <div class="container">
         <nav>
             <ol class="breadcrumb">
@@ -93,7 +121,7 @@ if (isset($_GET['product_id'])) {
                                         Quantity:
                                     </span>
                                     <div>
-                                        <input type="number" name="qty" class="input-qty" value="1" required>
+                                        <input type="number" name="qty" class="input-qty" value="1" min="1" required>
                                     </div>
                                 </div>
                                 <div class='order-product-category'>
@@ -112,19 +140,19 @@ if (isset($_GET['product_id'])) {
                         <section class='order-details-delivery'>
                             <div class='order-detail'>
                                 First Name:
-                                <input type="text" name="fname">
+                                <input type="text" name="fname" required>
                             </div>
                             <div class='order-detail'>
                                 Last Name:
-                                <input type="text" name="lname">
+                                <input type="text" name="lname" required>
                             </div>
                             <div class='order-detail'>
                                 Phone Number:
-                                <input type="text" name="pnumber">
+                                <input type="text" name="pnumber" required>
                             </div>
                             <div class='order-detail'>
                                 Adress:
-                                <input type="text" name="adress">
+                                <input type="text" name="adress" required>
                             </div>
                             <div>
                                 <input type="submit" name="submit" value="Give it to me!" class='order-confirm-button'>
@@ -204,9 +232,33 @@ if (isset($_GET['product_id'])) {
     </div>
 
     </section>
+    <?php
+    if (isset($_GET['submit'])) {
+        $first_name = $_GET['fname'];
+        $last_name = $_GET['lname'];
+        $phone_number = $_GET['pnumber'];
+        $client_order = $_GET['clientOrder'];
 
+        $sql5 = "INSERT INTO `fast-order` SET
+             First_Name = '$first_name',
+             Last_Name = '$last_name',
+             Phonenumber = '$phone_number',
+             Interest = '$client_order'
+             ";
+        echo $sql5;
+        $res = mysqli_query($conn, $sql5) or die(mysqli_error('error'));
+
+        if ($res == TRUE) {
+            header('location:' . SITEURL . 'index.php');
+        } else {
+            header('location:' . SITEURL . 'index.php');
+        }
+    }
+    ?>
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js/scipt.js" async defer></script>
 </body>
 
 </html>
